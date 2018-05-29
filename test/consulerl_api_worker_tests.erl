@@ -6,7 +6,7 @@
 -include_lib("eunit/include/eunit.hrl").
 
 setup_worker() ->
-  consulerl_api_worker:start_link("localhost", 8500, "").
+  consulerl_api_worker:start_link("localhost", 8500, {acl, ""}).
 
 setup_get() ->
   ok = consulerl_eunit:setup_app(),
